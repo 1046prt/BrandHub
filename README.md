@@ -21,6 +21,23 @@ Brand Hub is a web application designed to showcase a variety of brands across d
 - **Sign Up Page**: A page for new users to create an account.
 - **Contact Page**: A page for users to get in touch with the Brand Hub team.
 
+
+## Updates
+
+### CSS Enhancements:
+- Refined the layout for better mobile responsiveness.
+- Enhanced visual styles for brand cards with hover effects.
+- Improved overall design aesthetics to align with modern UI trends.
+
+### JavaScript Updates:
+- Optimized the search functionality to improve real-time search accuracy.
+- Added smooth transition effects for the brand modal display.
+- Implemented better state management for dynamic brand filtering.
+
+### Brand Logos:
+- New brand logos have been added across various categories to improve the visual appeal and brand recognition. These logos are now displayed on brand cards.
+
+
 ## Installation
 To run the Brand Hub application locally, follow these steps:
 
