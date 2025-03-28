@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #060606;
-    --secondary-color: #5072a7;
-    --background-color: #f4f4f4;
+    --primary-color: #1a2980; /* Updated to match the gradient */
+    --secondary-color: #26d0ce; /* Updated to match the gradient */
+    --background-color: #f4f4f4; /* Keep original background color */
     --white: #ffffff;
     --error-color: #ff4444;
 }
@@ -21,6 +21,11 @@ body {
     min-height: 100vh;
     line-height: 1.6;
     padding: 20px;
+    background: linear-gradient(
+        135deg,
+        #1a2a40,
+        #26a0a6
+    ); /* Updated gradient */
 }
 
 /* Navbar styles */
@@ -29,7 +34,11 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--primary-color);
+    background: linear-gradient(
+        to right,
+        rgba(26, 41, 128, 0.8),
+        rgba(38, 208, 206, 0.8)
+    ); /* Updated gradient */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -165,7 +174,11 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: var(--primary-color);
+    background: linear-gradient(
+        to right,
+        #1a2980,
+        #26d0ce
+    ); /* Updated gradient */
     color: var(--white);
     text-align: center;
     padding: 10px 0;
