@@ -61,14 +61,11 @@ body {
     position: relative;
 }
 
-
-
 .nav-links a:hover {
     color: #97cbd8;
 }
 
 .nav-links a:hover::after {
-    
     content: '';
     position: absolute;
     width: 0;
@@ -77,8 +74,6 @@ body {
     left: 0;
     background: linear-gradient(to right, #ff6b6b, #4ecdc4);
     transition: width 0.3s ease;
-    
-    
     width: 100%;
 }
 
@@ -104,7 +99,7 @@ body {
     padding: 10px;
     border: 1px solid rgba(26, 41, 128, 0.3);
     border-radius: 4px;
-    background: white; /* Changed to white */
+    background: white;
     color: #1a2a40;
     transition: all 0.3s ease;
     appearance: none;
@@ -130,6 +125,30 @@ body {
         5px 5px,
         5px 5px;
     background-repeat: no-repeat;
+}
+
+/* Add Brand Button */
+.add-brand-btn {
+    padding: 10px 15px;
+    background: linear-gradient(to right, #1a2980, #26d0ce);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+}
+
+.add-brand-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.add-brand-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .brand-grid {
@@ -227,7 +246,7 @@ body {
 
 .brand-card p {
     margin: 0;
-    color: #34495e; /* Original description color */
+    color: #34495e;
     font-size: 14px;
     line-height: 1.5;
     opacity: 0.8;
@@ -312,7 +331,7 @@ body {
 }
 
 #modalDetails p {
-    color: #1c2b3a; /* Changed description color in modal */
+    color: #1c2b3a;
     margin-bottom: 10px;
 }
 
@@ -357,6 +376,74 @@ body {
 .modal-links a:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(38, 208, 206, 0.5);
+}
+
+/* Add Brand Form Styles */
+.add-brand-form {
+    text-align: left;
+}
+
+.add-brand-form h2 {
+    color: #1a2980;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1c2b3a;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(26, 41, 128, 0.3);
+    border-radius: 4px;
+    background: white;
+    color: #1a2a40;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="url"]:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: rgba(38, 208, 206, 0.6);
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        0 0 10px rgba(38, 208, 206, 0.3);
+}
+
+.form-help {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.submit-btn {
+    background: linear-gradient(to right, #1a2980, #26d0ce);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
 .footer {
@@ -407,6 +494,9 @@ body {
     }
     .brand-grid {
         padding: 10px;
+    }
+    .add-brand-btn {
+        width: 100%;
     }
 }
 
