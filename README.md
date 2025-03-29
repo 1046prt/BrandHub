@@ -28,7 +28,8 @@ Brand Hub is a web application designed to showcase a variety of brands across d
 - Refined the layout for better mobile responsiveness.
 - Enhanced visual styles for brand cards with hover effects.
 - Improved overall design aesthetics to align with modern UI trends.
-- I have updated all the styles and made it a responsive design for all the brands and also made the CSS design change into the login page and the about us page. 
+- I have updated all the styles and made it a responsive design for all the brands and also made the CSS design change into the login page and the about us page.
+- I have added a button to allow users to add brands, along with some categories and their related brands. Additionally, I have updated the CSS and JavaScript. 
 
 ### JavaScript Updates:
 - Optimized the search functionality to improve real-time search accuracy.
