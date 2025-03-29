@@ -9,7 +9,7 @@
 <body>
     <div class="header">
         <div class="logo-container">
-            <img src="https://via.placeholder.com/50?text=BH" alt="BrandHub Logo" class="logo-img">
+            <img src="Brand Hub.png" alt="BrandHub Logo" class="logo-img">
             <div class="logo">Brand Hub</div>
         </div>
         <div class="nav-links">
@@ -19,12 +19,13 @@
             <a href="contact.html">Contact Us</a>
         </div>
     </div>
-
+            
     <div class="search-filter-container">
         <input type="text" id="searchInput" placeholder="Search brands by name or category...">
         <select id="categoryFilter">
             <option value="">All Categories</option>
         </select>
+        <button id="addBrandBtn" class="add-brand-btn">Add New Brand</button>
     </div>
 
     <div id="brandGrid" class="brand-grid">
@@ -38,14 +39,53 @@
         </div>
     </div>
 
+    <div id="addBrandModal" class="modal">
+        <div class="modal-content add-brand-form">
+            <span class="close-modal close-add-modal">&times;</span>
+            <h2>Add New Brand</h2>
+            <form id="addBrandForm">
+                <div class="form-group">
+                    <label for="brandName">Brand Name:</label>
+                    <input type="text" id="brandName" required>
+                </div>
+                <div class="form-group">
+                    <label for="brandCategory">Category:</label>
+                    <select id="brandCategory" required>
+                        <option value="">Select a category</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="brandDescription">Description:</label>
+                    <input type="text" id="brandDescription" required>
+                </div>
+                <div class="form-group">
+                    <label for="brandWebsite">Website URL:</label>
+                    <input type="url" id="brandWebsite" placeholder="https://example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="brandLogo">Logo URL:</label>
+                    <input type="text" id="brandLogo" placeholder="Images/logo.png">
+                    <p class="form-help">Leave empty to use a placeholder</p>
+                </div>
+                <div class="form-group">
+                    <label for="brandFamous">
+                        <input type="checkbox" id="brandFamous">
+                        Mark as Famous Brand
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">Add Brand</button>
+            </form>
+        </div>
+    </div>
+
     <footer class="footer">
         <p>&copy; 2025 BRAND HUB. All Rights Reserved.</p>
         <div class="footer-links">
-            <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-            <a href="#">About Us</a>
+            <a href="contact.html">Contact us</a>
+            <a href="about.html">About Us</a>
         </div>
     </footer>
-        <script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
