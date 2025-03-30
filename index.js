@@ -326,28 +326,27 @@ const addBrandForm = document.getElementById('addBrandForm');
 const brandCategorySelect = document.getElementById('brandCategory');
 
 // Populate category filter dropdown
-function populateCategoryFilter() {
-// Clear existing options except the first one
-categoryFilter.innerHTML = '<option value="">All Categories</option>';
-
-const categories = [...new Set(brandsData.map(brand => brand.category))].sort();
-categories.forEach(category => {
+function populateCategoryFilter() 
+{
+    // Clear existing options except the first one
+    categoryFilter.innerHTML = '<option value="">All Categories</option>';
+    const categories = [...new Set(brandsData.map(brand => brand.category))].sort();
+    categories.forEach(category => {
     const option = document.createElement('option');
     option.value = category;
     option.textContent = category;
     categoryFilter.appendChild(option);
-});
+    });
 }
 
 // Render brand grid
-function renderBrandGrid(filteredBrands = brandsData) {
-brandGrid.innerHTML = '';
-filteredBrands.forEach(brand => {
+function renderBrandGrid(filteredBrands = brandsData) 
+{
+    brandGrid.innerHTML = '';
+    filteredBrands.forEach(brand => {
     const brandCard = document.createElement('div');
     brandCard.classList.add('brand-card');
-    
     const logoSrc = brand.logo || `https://via.placeholder.com/120?text=${brand.name.substring(0,2)}`;
-    
     brandCard.innerHTML = `
         <img src="${logoSrc}" alt="${brand.name}" class="brand-logo">
         <h3>${brand.name}</h3>
@@ -355,33 +354,35 @@ filteredBrands.forEach(brand => {
     `;
     brandCard.addEventListener('click', () => showBrandDetails(brand));
     brandGrid.appendChild(brandCard);
-});
+    });
 }
 
 // Show brand details in modal
-function showBrandDetails(brand) {
-const logoSrc = brand.logo || `https://via.placeholder.com/200?text=${brand.name.substring(0,2)}`;
-
-modalDetails.innerHTML = `
+function showBrandDetails(brand) 
+{
+    const logoSrc = brand.logo || `https://via.placeholder.com/200?text=${brand.name.substring(0,2)}`;
+    modalDetails.innerHTML = `
     <img src="${logoSrc}" alt="${brand.name}">
     <h2>${brand.name}</h2>
     <p>${brand.description}</p>
     <p><strong>Category:</strong> ${brand.category}</p>
     <div class="modal-links">
-        <a href="${brand.website}" target="_blank">Official Website</a>
-        <a href="https://www.google.com/search?q=${encodeURIComponent(brand.name + ' social media')}" target="_blank">Social Media</a>
+    <a href="${brand.website}" target="_blank">Official Website</a>
+    <a href="https://www.google.com/search?q=${encodeURIComponent(brand.name + ' social media')}" target="_blank">Social Media</a>
     </div>
-`;
-brandModal.style.display = 'flex';
+    `;
+    brandModal.style.display = 'flex';
 }
 
 // Filter brands function
-function filterBrands() {
-const searchTerm = searchInput.value.toLowerCase().trim();
-const categoryTerm = categoryFilter.value;
+function filterBrands() 
+{
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const categoryTerm = categoryFilter.value;
 
-// Define keywords for categories
-const categoryKeywords = {
+    // Define keywords for categories
+    const categoryKeywords = 
+    {
     'Automobiles': ['car', 'automobile', 'vehicle', 'motor'],
     'Processor': ['processor', 'graphics', 'cpu', 'gpu'],
     'EdTech Course': ['course', 'learning', 'education', 'certification'],
@@ -409,48 +410,25 @@ const categoryKeywords = {
     'Laptop': ['laptop', 'notebook', 'computer', 'portable'],
     'Smartphone': ['smartphone', 'mobile', 'cell phone', 'device'],
     'Delivery': ['delivery','shipping', 'courier', 'logistics', 'transport']
-};
+    };
 
-let filteredBrands = brandsData;
+    let filteredBrands = brandsData;
 
-// Check if the search term matches any category keywords
-for (const [category, keywords] of Object.entries(categoryKeywords)) {
+    // Check if the search term matches any category keywords
+    for (const [category, keywords] of Object.entries(categoryKeywords)) {
     if (keywords.some(keyword => searchTerm.includes(keyword))) {
         // If a keyword matches, filter brands by that category
         filteredBrands = brandsData.filter(brand => brand.category === category);
         break; // Exit the loop once a match is found
     }
 }
-
-// Filter brands function
-function filterBrands() {
-const searchTerm = searchInput.value.toLowerCase().trim();
-const categoryTerm = categoryFilter.value;
-
-// Filter brands based on search term and category
-const filteredBrands = brandsData.filter(brand => {
-    const matchesCategory = categoryTerm === '' || brand.category === categoryTerm;
-    const matchesSearch = searchTerm === '' || 
-        brand.name.toLowerCase().includes(searchTerm) || 
-        brand.category.toLowerCase().includes(searchTerm) ||
-        brand.description.toLowerCase().includes(searchTerm);
-    
-    return matchesCategory && matchesSearch;
-});
-
-renderBrandGrid(filteredBrands);
-
-if (filteredBrands.length === 0) {
-    brandGrid.innerHTML = '<p style="width: 100%; text-align: center; color: white;">No brands found matching your search.</p>';
-}
-}
-
 // Event listeners for search and category filter
 searchInput.addEventListener('input', filterBrands);
-categoryFilter.addEventListener('change', () => {
-searchInput.value = ''; 
-filterBrands(); 
-});
+categoryFilter.addEventListener('change', () => 
+    {
+    searchInput.value = ''; 
+    filterBrands(); 
+    });
 
 // Further filter by search term if no category match was found
 if (filteredBrands.length === brandsData.length) {
@@ -460,14 +438,14 @@ if (filteredBrands.length === brandsData.length) {
             brand.name.toLowerCase().includes(searchTerm) || 
             brand.category.toLowerCase().includes(searchTerm) ||
             brand.description.toLowerCase().includes(searchTerm);
-        
-        return matchesCategory && matchesSearch;
+            return matchesCategory && matchesSearch;
     });
 }
 
 renderBrandGrid(filteredBrands);
 
-if (filteredBrands.length === 0) {
+if (filteredBrands.length === 0) 
+    {
     brandGrid.innerHTML = '<p style="width: 100%; text-align: center; color: white;">No brands found matching your search.</p>';
 }
 }
