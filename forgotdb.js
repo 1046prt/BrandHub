@@ -1,5 +1,4 @@
 const firebaseConfig = {
-apiKey: "AIzaSyAI0DFmypBB-F-1y9ikpPXewjgH1OKB8EI",
 authDomain: "brand-hub-144ae.firebaseapp.com",
 databaseURL: "https://brand-hub-144ae-default-rtdb.firebaseio.com",
 projectId: "brand-hub-144ae",
