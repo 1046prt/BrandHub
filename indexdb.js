@@ -1,12 +1,12 @@
 // Initialize Firebase
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "yourbrandhub.firebaseapp.com",
-    databaseURL: "https://yourbrandhub-default-rtdb.firebaseio.com",
-    projectId: "yourbrandhub",
-    storageBucket: "yourbrandhub.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_ID",
-    appId: "YOUR_APP_ID"
+    authDomain: "brand-hub-144ae.firebaseapp.com",
+databaseURL: "https://brand-hub-144ae-default-rtdb.firebaseio.com",
+projectId: "brand-hub-144ae",
+storageBucket: "brand-hub-144ae.firebasestorage.app",
+messagingSenderId: "814169373829",
+appId: "1:814169373829:web:d932c481e077edf0dffdec",
+measurementId: "G-7K74KYTYHF"
 };
 
 // Initialize Firebase
