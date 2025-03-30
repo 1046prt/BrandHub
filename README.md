@@ -35,6 +35,7 @@ Brand Hub is a web application designed to showcase a variety of brands across d
 - Optimized the search functionality to improve real-time search accuracy.
 - Added smooth transition effects for the brand modal display.
 - Implemented better state management for dynamic brand filtering.
+- I fixed the search filter to make it easier to differentiate brands and also connected the webpages to the Firebase database
 
 ### Brand Logos:
 - New brand logos have been added across various categories to improve the visual appeal and brand recognition. These logos are now displayed on brand cards.
