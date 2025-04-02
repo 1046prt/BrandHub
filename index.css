@@ -526,8 +526,32 @@ body {
     }
 }
 
+
 @media (max-width: 480px) {
     #searchInput, #categoryFilter {
         width: 100%;
+    }
+}
+.brand-card {
+    position: relative; /* Ensure the close button is positioned relative to the card */
+    padding: 20px; /* Add padding to the card */
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px; /* Adjust the top position */
+    right: 10px; /* Adjust the right position */
+    cursor: pointer;
+    font-size: 24px;
+    color: #1a2980;
+    transition: all 0.3s ease;
+    z-index: 2; /* Ensure it is above other elements */
+}
+
+@media (max-width: 480px) {
+    .close-modal {
+        font-size: 20px; /* Reduce the size of the close button on mobile */
+        top: 5px; /* Adjust the top position for mobile */
+        right: 5px; /* Adjust the right position for mobile */
     }
 }
