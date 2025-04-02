@@ -206,8 +206,6 @@ body {
     overflow: hidden;
     position: relative;
     border: 1px solid rgba(38, 208, 206, 0.2);
-    position: relative; /* Ensure the close button is positioned relative to the card */
-    padding: 20px; /* Add padding to the card */
 }
 
 .brand-card::before {
