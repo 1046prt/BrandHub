@@ -5,7 +5,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: black;
+    background: linear-gradient(
+        135deg,
+        #1a2a40,
+        #26a0a6
+    );
 }
 
 .header {
@@ -41,12 +45,8 @@ body {
     flex: 1;
 }
 
-h1 {
-    color: #13aae0; 
-}
-
-h2 {
-    color: #13aae0;
+h1,h2 {
+    color: #D6FFFF; 
 }
 
 p {
