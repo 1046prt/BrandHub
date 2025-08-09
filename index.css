@@ -101,7 +101,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: var(--nav__txt--12);
+  color: var(--nav__txt--active) !important;
 }
 
 .nav-links a:hover::after {
