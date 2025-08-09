@@ -1,98 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 - Page Not Found | Brand Hub</title>
-    <link rel="icon" type="image/png" href="Brand Hub.png"/>
-    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="Brand Hub.png" />
+    <link rel="stylesheet" href="index.css" />
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, var(--body__bg--1), var(--body__bg--2));
-            color: var(--header__txt--5);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(
+          135deg,
+          var(--body__bg--1),
+          var(--body__bg--2)
+        );
+        color: var(--header__txt--5);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      /* Error Section */
+      .error-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: fadeIn 1.2s ease-in-out;
+      }
+      .error-code {
+        font-size: 8rem;
+        font-weight: bold;
+        background: linear-gradient(
+          to right,
+          var(--logo__bg--8),
+          var(--logo__bg--9)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 2px 2px 8px var(--logo__box__shadow--10);
+      }
+      .error-message {
+        font-size: 1.5rem;
+        margin: 10px 0 20px;
+      }
+      .home-btn {
+        background: linear-gradient(
+          135deg,
+          var(--add__bg--25),
+          var(--add__bg--26)
+        );
+        border: none;
+        padding: 12px 25px;
+        font-size: 1rem;
+        color: white;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0px 4px 10px var(--logo__box__shadow--10);
+        transition: transform 0.2s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+      }
+      .home-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 6px 15px var(--logo__box__shadow--10);
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-        /* Error Section */
-        .error-container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            animation: fadeIn 1.2s ease-in-out;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
-        .error-code {
-            font-size: 8rem;
-            font-weight: bold;
-            background: linear-gradient(to right, var(--logo__bg--8), var(--logo__bg--9));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px 8px var(--logo__box__shadow--10);
-        }
-        .error-message {
-            font-size: 1.5rem;
-            margin: 10px 0 20px;
-        }
-        .home-btn {
-            background: linear-gradient(135deg, var(--add__bg--25), var(--add__bg--26));
-            border: none;
-            padding: 12px 25px;
-            font-size: 1rem;
-            color: white;
-            border-radius: 25px;
-            cursor: pointer;
-            box-shadow: 0px 4px 10px var(--logo__box__shadow--10);
-            transition: transform 0.2s ease, box-shadow 0.3s ease;
-            text-decoration: none;
-        }
-        .home-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0px 6px 15px var(--logo__box__shadow--10);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Header with logo -->
     <div class="header">
-        <div class="logo-container">
-            <img src="Brand Hub.png" alt="BrandHub Logo" class="logo-img">
-            <div class="logo">Brand Hub</div>
-        </div>
+      <div class="logo-container">
+        <img src="Brand Hub.png" alt="BrandHub Logo" class="logo-img" />
+        <div class="logo">Brand Hub</div>
+      </div>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="login.html" id="loginLink">Login</a>
-            <a href="signup.html" id="signupLink">Sign Up</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="login.html" id="loginLink">Login</a>
+        <a href="signup.html" id="signupLink">Sign Up</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
     </div>
 
     <!-- 404 Content -->
     <div class="error-container">
-        <div class="error-code">404</div>
-        <div class="error-message">Oops! The page you're looking for doesn't exist.</div>
-        <a href="index.html" class="home-btn">Go Back Home</a>
+      <div class="error-code">404</div>
+      <div class="error-message">
+        Oops! The page you're looking for doesn't exist.
+      </div>
+      <a href="index.html" class="home-btn">Go Back Home</a>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 BRAND HUB. All Rights Reserved.</p>
-        <div class="footer-links">
-            <a href="#">Terms of Service</a>
-            <a href="contact.html">Contact us</a>
-            <a href="about.html">About Us</a>
-        </div>
+      <p>&copy; 2025 BRAND HUB. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#">Terms of Service</a>
+        <a href="contact.html">Contact us</a>
+        <a href="about.html">About Us</a>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>

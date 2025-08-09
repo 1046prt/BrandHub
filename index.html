@@ -1,94 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brand Hub</title>
-    <link rel="icon" type="image/png" href="Brand Hub.png"/>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <link rel="icon" type="image/png" href="Brand Hub.png" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <div class="header">
-        <div class="logo-container">
-            <img src="Brand Hub.png" alt="BrandHub Logo" class="logo-img">
-            <div class="logo">Brand Hub</div>
-        </div>
+      <div class="logo-container">
+        <img src="Brand Hub.png" alt="BrandHub Logo" class="logo-img" />
+        <div class="logo">Brand Hub</div>
+      </div>
 
-        <div class ="nav-links">
-            <a href="index.html">Home</a>
-            <a href="login.html" id="loginLink">Login</a>
-            <a href="signup.html" id="signupLink">Sign Up</a>
-            <a href="contact.html">Contact Us</a>
-            <span id="userEmail" style="display:none;"></span>
-        </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="login.html" id="loginLink">Login</a>
+        <a href="signup.html" id="signupLink">Sign Up</a>
+        <a href="contact.html">Contact Us</a>
+        <span id="userEmail" style="display: none"></span>
+      </div>
     </div>
 
     <div class="search-filter-container">
-        <input type="text" id="searchInput" placeholder="Search brands by name or category...">
-        <select id="categoryFilter">
-            <option value="">All Categories</option>
-        </select>
-        <button id="addBrandBtn" class="add-brand-btn">Add New Brand</button>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search brands by name or category..."
+      />
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+      </select>
+      <button id="addBrandBtn" class="add-brand-btn">Add New Brand</button>
     </div>
 
     <div id="brandGrid" class="brand-grid">
-        <!-- Brands will be automatically adjusted here -->
+      <!-- Brands will be automatically adjusted here -->
     </div>
 
     <div id="brandModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div id="modalDetails"></div>
-        </div>
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="modalDetails"></div>
+      </div>
     </div>
 
     <div id="addBrandModal" class="modal">
-        <div class="modal-content add-brand-form">
-            <span class="close-modal close-add-modal">&times;</span>
-            <h2>Add New Brand</h2>
-            <form id="addBrandForm">
-                <div class="form-group">
-                    <label for="brandName">Brand Name:</label>
-                    <input type="text" id="brandName" required>
-                </div>
-                <div class="form-group">
-                    <label for="brandCategory">Category:</label>
-                    <select id="brandCategory" required>
-                        <option value="">Select a category</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="brandDescription">Description:</label>
-                    <input type="text" id="brandDescription" required>
-                </div>
-                <div class="form-group">
-                    <label for="brandWebsite">Website URL:</label>
-                    <input type="url" id="brandWebsite" placeholder="https://example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="brandLogo">Logo URL:</label>
-                    <input type="text" id="brandLogo" placeholder="Images/logo.png">
-                    <p class="form-help">Leave empty to use a placeholder</p>
-                </div>
-                <div class="form-group">
-                    <label for="brandFamous">
-                        <input type="checkbox" id="brandFamous">
-                        Mark as Famous Brand
-                    </label>
-                </div>
-                <button type="submit" class="submit-btn">Add Brand</button>
-            </form>
-        </div>
+      <div class="modal-content add-brand-form">
+        <span class="close-modal close-add-modal">&times;</span>
+        <h2>Add New Brand</h2>
+        <form id="addBrandForm">
+          <div class="form-group">
+            <label for="brandName">Brand Name:</label>
+            <input type="text" id="brandName" required />
+          </div>
+          <div class="form-group">
+            <label for="brandCategory">Category:</label>
+            <select id="brandCategory" required>
+              <option value="">Select a category</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="brandDescription">Description:</label>
+            <input type="text" id="brandDescription" required />
+          </div>
+          <div class="form-group">
+            <label for="brandWebsite">Website URL:</label>
+            <input
+              type="url"
+              id="brandWebsite"
+              placeholder="https://example.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="brandLogo">Logo URL:</label>
+            <input type="text" id="brandLogo" placeholder="Images/logo.png" />
+            <p class="form-help">Leave empty to use a placeholder</p>
+          </div>
+          <div class="form-group">
+            <label for="brandFamous">
+              <input type="checkbox" id="brandFamous" />
+              Mark as Famous Brand
+            </label>
+          </div>
+          <button type="submit" class="submit-btn">Add Brand</button>
+        </form>
+      </div>
     </div>
 
     <footer class="footer">
-        <p>&copy; 2025 BRAND HUB. All Rights Reserved.</p>
-        <div class="footer-links">
-            <a href="#">Terms of Service</a>
-            <a href="contact.html">Contact us</a>
-            <a href="about.html">About Us</a>
-        </div>
+      <p>&copy; 2025 BRAND HUB. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#">Terms of Service</a>
+        <a href="contact.html">Contact us</a>
+        <a href="about.html">About Us</a>
+      </div>
     </footer>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

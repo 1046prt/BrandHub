@@ -1,83 +1,77 @@
 body {
-    font-family: 'Segoe UI', sans-serif; 
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: linear-gradient(
-        135deg,
-        #1a2a40,
-        #26a0a6
-    );
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a2a40, #26a0a6);
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(
-        to right,
-        rgba(26, 41, 128, 0.8),
-        rgba(38, 208, 206, 0.8)
-    ); 
-    color: #ffffff; /* White for header text */
-    padding: 15px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(
+    to right,
+    rgba(26, 41, 128, 0.8),
+    rgba(38, 208, 206, 0.8)
+  );
+  color: #ffffff; /* White for header text */
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .nav-links {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #f7f8f8; /* Accent color for navigation links */
+  text-decoration: none;
+  color: #f7f8f8; /* Accent color for navigation links */
 }
 
 .content {
-    padding: 20px;
-    flex: 1;
+  padding: 20px;
+  flex: 1;
 }
 
-h1,h2 {
-    color: #D6FFFF; 
+h1,
+h2 {
+  color: #d6ffff;
 }
 
 p {
-    line-height: 1.6;
-    color: #ffffff; 
+  line-height: 1.6;
+  color: #ffffff;
 }
 
-ul, ol {
-    color: #ffffff; 
-    padding-left: 20px; 
+ul,
+ol {
+  color: #ffffff;
+  padding-left: 20px;
 }
 
 .footer {
-    background: linear-gradient(
-        to right,
-        #1a2980,
-        #26d0ce
-    );
+  background: linear-gradient(to right, #1a2980, #26d0ce);
 
-    color: #ffffff; /* Keep footer text white for contrast */
-    text-align: center;
-    padding: 20px;
-    flex-shrink: 0; /* Prevent footer from shrinking */
+  color: #ffffff; /* Keep footer text white for contrast */
+  text-align: center;
+  padding: 20px;
+  flex-shrink: 0; /* Prevent footer from shrinking */
 }
 
 .footer-links {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .footer-links a {
-    color: #f5f9f9; /* Accent color for footer links */
-    margin: 0 10px;
-    text-decoration: none;
+  color: #f5f9f9; /* Accent color for footer links */
+  margin: 0 10px;
+  text-decoration: none;
 }

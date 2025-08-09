@@ -1,215 +1,211 @@
 :root {
-    --primary-color: #1a2980; 
-    --secondary-color: #26d0ce; 
-    --background-color: #f4f4f4;
-    --white: #ffffff;
-    --error-color: #ff4444;
-    --text-color: #333;
+  --primary-color: #1a2980;
+  --secondary-color: #26d0ce;
+  --background-color: #f4f4f4;
+  --white: #ffffff;
+  --error-color: #ff4444;
+  --text-color: #333;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--background-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    line-height: 1.6;
-    color: var(--text-color);
-    padding: 20px;
-    background: linear-gradient(
-        135deg,
-        #1a2a40,
-        #26a0a6
-    ); 
+  font-family: "Arial", sans-serif;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.6;
+  color: var(--text-color);
+  padding: 20px;
+  background: linear-gradient(135deg, #1a2a40, #26a0a6);
 }
 
 /* Navbar styles */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(
-        to right,
-        rgba(26, 41, 128, 0.8),
-        rgba(38, 208, 206, 0.8)
-    ); /* Updated gradient */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(26, 41, 128, 0.8),
+    rgba(38, 208, 206, 0.8)
+  ); /* Updated gradient */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  z-index: 1000;
 }
 
 .navbar .brand {
-    color: var(--white);
-    font-size: 24px;
-    font-weight: bold;
+  color: var(--white);
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .navbar-links a {
-    color: var(--white);
-    text-decoration: none;
-    margin-left: 15px;
-    transition: color 0.3s ease;
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 15px;
+  transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 /* Login container styles */
 .login-container {
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 450px;
-    padding: 30px;
-    margin-top: 80px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  margin-top: 80px;
 }
 
 .login-container h2 {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 25px;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 25px;
 }
 
 .form-group {
-    margin-bottom: 15px;
-    position: relative;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    transition: border-color 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
 }
 
 .form-group input:focus {
-    outline: none;
-    border-color: var(--primary-color);
+  outline: none;
+  border-color: var(--primary-color);
 }
 
 .form-group .error-message {
-    color: var(--error-color);
-    font-size: 0.8em;
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-    display: none;
+  color: var(--error-color);
+  font-size: 0.8em;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  display: none;
 }
 
 .form-group.error input {
-    border-color: var(--error-color);
+  border-color: var(--error-color);
 }
 
 .form-group.error .error-message {
-    display: block;
+  display: block;
 }
 
 .login-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .login-btn:hover {
-    background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 .forgot-password {
-    text-align: right;
-    margin-bottom: 15px;
+  text-align: right;
+  margin-bottom: 15px;
 }
 
 .forgot-password a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 0.9em;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.9em;
 }
 
 .social-login {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .social-btn {
-    width: 48%;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .google-btn {
-    background-color: #db4437;
-    color: white;
+  background-color: #db4437;
+  color: white;
 }
 
 .github-btn {
-    background-color: #333;
-    color: white;
+  background-color: #333;
+  color: white;
 }
 
 .signup-link {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .signup-link a {
-    color: var(--primary-color);
-    text-decoration: none;
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 /* Footer styles */
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(
-        to right,
-        #1a2980,
-        #26d0ce
-    ); /* Updated gradient */
-    color: var(--white);
-    text-align: center;
-    padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    #1a2980,
+    #26d0ce
+  ); /* Updated gradient */
+  color: var(--white);
+  text-align: center;
+  padding: 10px 0;
 }
 
 /* Responsive design */
 @media (max-width: 600px) {
-    .login-container {
-        width: 100%;
-        padding: 20px;
-    }
+  .login-container {
+    width: 100%;
+    padding: 20px;
+  }
 
-    .social-login {
-        flex-direction: column;
-    }
+  .social-login {
+    flex-direction: column;
+  }
 
-    .social-btn {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+  .social-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
