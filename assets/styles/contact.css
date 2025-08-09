@@ -1,0 +1,172 @@
+:root {
+  --primary-color: #1a2980;
+  --secondary-color: #26d0ce;
+  --text-light: #f9f9f9;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --border-glass: rgba(255, 255, 255, 0.3);
+  --shadow-glass: rgba(0, 0, 0, 0.2);
+  --navbar__txt--1: yellow;
+	--contact__txt--2: #fff;
+	--form__txt--3: rgba(255,255,255,0.7);
+	--contact__txt--4: rgba(255,255,255,0.9);
+	--footer__bg--5: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: transparent;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+}
+
+.navbar .brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar-links a {
+  color: var(--text-light);
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-links a:hover,
+.navbar-links .active {
+  color: var(--navbar__txt--1);
+}
+
+/* Contact Card */
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.contact-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 25px var(--shadow-glass);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.contact-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: var(--contact__txt--2);
+}
+
+/* Floating Labels */
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: transparent;
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  color: var(--contact__txt--2);
+  font-size: 1rem;
+  outline: none;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: var(--form__txt--3);
+  font-size: 0.95rem;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+  top: -8px;
+  font-size: 0.8rem;
+  color: var(--navbar__txt--1);
+  background: var(--glass-bg);
+  padding: 0 5px;
+  border-radius: 4px;
+}
+
+/* Button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+  border: none;
+  border-radius: 8px;
+  color: var(--contact__txt--2);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px var(--shadow-glass);
+}
+
+/* Contact Info */
+.contact-info {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--contact__txt--4);
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.85rem;
+  background: var(--footer__bg--5);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
