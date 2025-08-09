@@ -1,58 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - BRAND HUB</title>
-  <link rel="stylesheet" href="assets/styles/contact.css" />
-</head>
-<body>
-  <nav class="navbar">
-    <div class="brand">BRANDHUB</div>
-    <div class="navbar-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="active">Contact</a>
-    </div>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - BRAND HUB</title>
+    <link rel="stylesheet" href="assets/styles/contact.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="brand">BRANDHUB</div>
+      <div class="navbar-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+    </nav>
 
-  <div class="container">
-    <div class="contact-card">
-      <h2>Get in Touch</h2>
-      <form id="contactForm">
-        <div class="form-group">
-          <input type="text" id="name" name="name" required />
-          <label for="name">Full Name</label>
+    <div class="container">
+      <div class="contact-card">
+        <h2>Get in Touch</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required />
+            <label for="name">Full Name</label>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email" name="email" required />
+            <label for="email">Email Address</label>
+          </div>
+
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" />
+            <label for="phone">Phone Number (Optional)</label>
+          </div>
+
+          <div class="form-group">
+            <textarea id="message" name="message" required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+          <p>
+            <strong>Address:</strong> The ICFAI University, Jaipur, Rajasthan
+          </p>
+          <p><strong>Phone:</strong> (+91) 9508015377</p>
+          <p><strong>Email:</strong> 1046prt@gmail.com</p>
         </div>
-
-        <div class="form-group">
-          <input type="email" id="email" name="email" required />
-          <label for="email">Email Address</label>
-        </div>
-
-        <div class="form-group">
-          <input type="tel" id="phone" name="phone" />
-          <label for="phone">Phone Number (Optional)</label>
-        </div>
-
-        <div class="form-group">
-          <textarea id="message" name="message" required></textarea>
-          <label for="message">Your Message</label>
-        </div>
-
-        <button type="submit" class="submit-btn">Send Message</button>
-      </form>
-
-      <div class="contact-info">
-        <p><strong>Address:</strong> The ICFAI University, Jaipur, Rajasthan</p>
-        <p><strong>Phone:</strong> (+91) 9508015377</p>
-        <p><strong>Email:</strong> 1046prt@gmail.com</p>
       </div>
     </div>
-  </div>
 
-  <footer class="footer">
-    <p>&copy; 2025 BRAND HUB. All Rights Reserved.</p>
-  </footer>
-</body>
+    <footer class="footer">
+      <p>&copy; 2025 BRAND HUB. All Rights Reserved.</p>
+    </footer>
+  </body>
 </html>

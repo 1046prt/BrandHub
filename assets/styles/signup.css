@@ -35,7 +35,6 @@ body {
   background: linear-gradient(135deg, var(--body__bg--1), var(--body__bg--2));
 }
 
-/* Navbar styles */
 .navbar {
   position: fixed;
   top: 0;
@@ -70,7 +69,6 @@ body {
   color: var(--secondary-color);
 }
 
-/* Signup container styles */
 .signup-container {
   background-color: var(--white);
   border-radius: 10px;
@@ -175,7 +173,6 @@ body {
   text-decoration: none;
 }
 
-/* Footer styles */
 .footer {
   position: fixed;
   bottom: 0;

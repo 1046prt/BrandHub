@@ -14,7 +14,7 @@
   --card-bg: rgba(255, 255, 255, 0.05);
   --card-border: rgba(255, 255, 255, 0.15);
   --card__box__shadow--1: rgba(0, 0, 0, 0.25);
-	--card__box__shadow--2: rgba(0, 0, 0, 0.35);
+  --card__box__shadow--2: rgba(0, 0, 0, 0.35);
 }
 
 body {
@@ -31,7 +31,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, var(--header__bg--3), var(--header__bg--4));
+  background: linear-gradient(
+    to right,
+    var(--header__bg--3),
+    var(--header__bg--4)
+  );
   color: var(--header__txt--5);
   padding: 15px 20px;
   box-shadow: 0 2px 6px var(--header__box__shadow--7);
@@ -126,7 +130,11 @@ ul {
   display: inline-block;
 }
 .footer {
-  background: linear-gradient(to right, var(--footer__bg--10), var(--footer__bg--11));
+  background: linear-gradient(
+    to right,
+    var(--footer__bg--10),
+    var(--footer__bg--11)
+  );
   color: var(--header__txt--5);
   text-align: center;
   padding: 20px;

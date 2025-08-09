@@ -27,7 +27,7 @@ Brand Hub is a web application designed to showcase a variety of brands across d
 
 ## Updates
 
-### CSS Enhancements:
+### **CSS Enhancements:**
 
 - Refined the layout for better mobile responsiveness.
 - Enhanced visual styles for brand cards with hover effects.
@@ -35,14 +35,14 @@ Brand Hub is a web application designed to showcase a variety of brands across d
 - I have updated all the styles and made it a responsive design for all the brands and also made the CSS design change into the login page and the about us page.
 - I have added a button to allow users to add brands, along with some categories and their related brands. Additionally, I have updated the CSS and JavaScript.
 
-### JavaScript Updates:
+### **JavaScript Updates:**
 
 - Optimized the search functionality to improve real-time search accuracy.
 - Added smooth transition effects for the brand modal display.
 - Implemented better state management for dynamic brand filtering.
 - I fixed the search filter to make it easier to differentiate brands and also connected the webpages to the Firebase database
 
-### Brand Logos:
+### **Brand Logos:**
 
 - New brand logos have been added across various categories to improve the visual appeal and brand recognition. These logos are now displayed on brand cards.
 
@@ -51,6 +51,7 @@ Brand Hub is a web application designed to showcase a variety of brands across d
 To run the Brand Hub application locally, follow these steps:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/1046prt/brand-hub.git
    ```

@@ -570,19 +570,19 @@ body {
 
 .close-modal {
   position: absolute;
-  top: 10px; /* Adjust the top position */
-  right: 10px; /* Adjust the right position */
+  top: 10px;
+  right: 10px;
   cursor: pointer;
   font-size: 24px;
   color: var(--add__bg--25);
   transition: all 0.3s ease;
-  z-index: 2; /* Ensure it is above other elements */
+  z-index: 2;
 }
 
 @media (max-width: 480px) {
   .close-modal {
-    font-size: 20px; /* Reduce the size of the close button on mobile */
-    top: 5px; /* Adjust the top position for mobile */
-    right: 5px; /* Adjust the right position for mobile */
+    font-size: 20px;
+    top: 5px;
+    right: 5px;
   }
 }

@@ -37,7 +37,6 @@ body {
   background: linear-gradient(135deg, var(--body__bg--1), var(--body__bg--2));
 }
 
-/* Navbar styles */
 .navbar {
   position: fixed;
   top: 0;
@@ -47,7 +46,7 @@ body {
     to right,
     var(--navbar__bg--3),
     var(--navbar__bg--4)
-  ); /* Updated gradient */
+  );
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,7 +71,6 @@ body {
   color: var(--secondary-color);
 }
 
-/* Login container styles */
 .login-container {
   background-color: var(--white);
   border-radius: 10px;
@@ -188,7 +186,6 @@ body {
   text-decoration: none;
 }
 
-/* Footer styles */
 .footer {
   position: fixed;
   bottom: 0;
@@ -198,13 +195,12 @@ body {
     to right,
     var(--footer__bg--10),
     var(--footer__bg--11)
-  ); 
+  );
   color: var(--white);
   text-align: center;
   padding: 10px 0;
 }
 
-/* Responsive design */
 @media (max-width: 600px) {
   .login-container {
     width: 100%;
