@@ -35,24 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const isPasswordValid = validateField(password, validatePassword);
 
     if (isEmailValid && isPasswordValid) {
-      // Simulate login (replace with actual backend authentication)
-      console.log("Login attempted");
-      console.log("Email:", email.value);
-
-      // Optional: Show success message or redirect
       alert("Login successful! Redirecting to dashboard.");
-      window.location.href = "/index.html"; // Replace with your actual dashboard page
+      window.location.href = "/index.html"; 
     }
   });
 
-  // Social login event listeners
   document.querySelector(".google-btn").addEventListener("click", () => {
-    // Redirect to Google OAuth
     window.location.href = "https://accounts.google.com/o/oauth2/auth";
   });
 
   document.querySelector(".github-btn").addEventListener("click", () => {
-    // Redirect to GitHub OAuth
     window.location.href = "https://github.com/login/oauth/authorize";
   });
 });

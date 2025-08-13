@@ -2071,11 +2071,10 @@ function filterBrands() {
   // Check if the search term matches any category keywords
   for (const [category, keywords] of Object.entries(categoryKeywords)) {
     if (keywords.some((keyword) => searchTerm.includes(keyword))) {
-      // If a keyword matches, filter brands by that category
       filteredBrands = brandsData.filter(
         (brand) => brand.category === category
       );
-      break; // Exit the loop once a match is found
+      break; 
     }
   }
   // Event listeners for search and category filter
@@ -2107,42 +2106,33 @@ function filterBrands() {
   }
 }
 
-// Open Add Brand modal
 addBrandBtn.addEventListener("click", () => {
   populateAddBrandCategories();
   addBrandModal.style.display = "flex";
 });
 
-// Close Add Brand modal
 closeAddModal.addEventListener("click", () => {
   addBrandModal.style.display = "none";
 });
 
-// Close modal when clicking outside
 brandModal.addEventListener("click", (event) => {
   if (event.target === brandModal) {
     brandModal.style.display = "none";
   }
 });
 
-// Close add brand modal when clicking outside
 addBrandModal.addEventListener("click", (event) => {
   if (event.target === addBrandModal) {
     addBrandModal.style.display = "none";
   }
 });
 
-// Populate categories in the Add Brand form
 function populateAddBrandCategories() {
-  // Clear existing options except the first one
   brandCategorySelect.innerHTML = '<option value="">Select a category</option>';
-
-  // Get unique categories and sort them
   const categories = [
     ...new Set(brandsData.map((brand) => brand.category)),
   ].sort();
 
-  // Add categories to dropdown
   categories.forEach((category) => {
     const option = document.createElement("option");
     option.value = category;
@@ -2150,7 +2140,6 @@ function populateAddBrandCategories() {
     brandCategorySelect.appendChild(option);
   });
 
-  // Add option to create a new category
   const newCategoryOption = document.createElement("option");
   newCategoryOption.value = "new_category";
   newCategoryOption.textContent = "-- Create New Category --";
@@ -2162,31 +2151,23 @@ brandCategorySelect.addEventListener("change", function () {
   if (this.value === "new_category") {
     const newCategory = prompt("Enter new category name:");
     if (newCategory && newCategory.trim() !== "") {
-      // Create and select the new option
       const newOption = document.createElement("option");
       newOption.value = newCategory.trim();
       newOption.textContent = newCategory.trim();
-
-      // Insert before the "Create New Category" option
       brandCategorySelect.insertBefore(
         newOption,
         brandCategorySelect.lastChild
       );
 
-      // Select the new option
       brandCategorySelect.value = newCategory.trim();
     } else {
-      // If canceled or empty, reset to first option
       brandCategorySelect.selectedIndex = 0;
     }
   }
 });
 
-// Handle form submission
 addBrandForm.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  // Get form values
   const name = document.getElementById("brandName").value.trim();
   const category = document.getElementById("brandCategory").value;
   const description = document.getElementById("brandDescription").value.trim();
@@ -2194,7 +2175,6 @@ addBrandForm.addEventListener("submit", (event) => {
   const logo = document.getElementById("brandLogo").value.trim() || null;
   const famous = document.getElementById("brandFamous").checked;
 
-  // Validate inputs
   if (name === "" || category === "" || description === "" || website === "") {
     alert("Please fill in all required fields.");
     return;
@@ -2210,16 +2190,9 @@ addBrandForm.addEventListener("submit", (event) => {
     famous,
   };
 
-  // Add new brand to brandsData array
   brandsData.push(newBrand);
-
-  // Reset form
   addBrandForm.reset();
-
-  // Close modal
   addBrandModal.style.display = "none";
-
-  // Update the category filter with the new category if it's new
   let categoryExists = false;
   for (let i = 0; i < categoryFilter.options.length; i++) {
     if (categoryFilter.options[i].value === category) {
@@ -2235,11 +2208,9 @@ addBrandForm.addEventListener("submit", (event) => {
     categoryFilter.appendChild(option);
   }
 
-  // Show the newly added brand
   searchInput.value = name;
   filterBrands();
 
-  // Show success message with animation
   const successMessage = document.createElement("div");
   successMessage.textContent = `Brand "${name}" has been added successfully!`;
   successMessage.style.position = "fixed";
@@ -2255,15 +2226,12 @@ addBrandForm.addEventListener("submit", (event) => {
   successMessage.style.zIndex = "1001";
   successMessage.style.opacity = "0";
   successMessage.style.transition = "opacity 0.5s ease";
-
   document.body.appendChild(successMessage);
 
-  // Show message with fade-in
   setTimeout(() => {
     successMessage.style.opacity = "1";
   }, 10);
 
-  // Remove message after 3 seconds with fade-out
   setTimeout(() => {
     successMessage.style.opacity = "0";
     setTimeout(() => {
@@ -2272,26 +2240,22 @@ addBrandForm.addEventListener("submit", (event) => {
   }, 3000);
 });
 
-// Close modal button event
 closeModal.addEventListener("click", () => {
   brandModal.style.display = "none";
 });
 
-// Initialize page with famous brands
 function initializePage() {
   const famousBrands = brandsData.filter((brand) => brand.famous);
   populateCategoryFilter();
   renderBrandGrid(famousBrands);
 }
 
-// Event listeners for search and category filter
 searchInput.addEventListener("input", filterBrands);
 categoryFilter.addEventListener("change", () => {
   searchInput.value = "";
   filterBrands();
 });
 
-// Initialize the page
 document.addEventListener("DOMContentLoaded", function () {
   initializePage();
 });

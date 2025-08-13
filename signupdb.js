@@ -1,4 +1,3 @@
-// Initialize Firebase
 const firebaseConfig = {
   authDomain: "brand-hub-144ae.firebaseapp.com",
   databaseURL: "https://brand-hub-144ae-default-rtdb.firebaseio.com",
@@ -9,11 +8,9 @@ const firebaseConfig = {
   measurementId: "G-7K74KYTYHF",
 };
 
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 var signupdb = firebase.database().ref("signupform");
 
-// Corrected form ID
 document.getElementById("signupForm").addEventListener("submit", submitform);
 
 function submitform(e) {
@@ -37,13 +34,10 @@ const savemessages = (name, mail, pass, cpass) => {
       cpass: cpass,
     })
     .then(() => {
-      // Hide login and signup links after successful signup
       document.getElementById("loginLink").style.display = "none";
       document.getElementById("signupLink").style.display = "none";
-
-      // Optionally, you can redirect or show a success message here
-      alert("Signup successful!"); // Show a success message
-      window.location.href = "/index.html"; // Redirect to home page
+      alert("Signup successful!");
+      window.location.href = "/index.html";
     })
     .catch((error) => {
       console.error("Error saving message: ", error);

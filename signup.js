@@ -57,23 +57,17 @@ document.addEventListener("DOMContentLoaded", () => {
       isPasswordValid &&
       isConfirmPasswordValid
     ) {
-      // Simulate form submission (replace with actual backend logic)
-      console.log("Form submitted successfully!");
-      console.log("Username:", username.value);
-      console.log("Email:", email.value);
 
-      // Optional: Show success message or redirect
       alert("Registration successful! Redirecting to login page.");
       window.location.href = "/login.html";
     }
   });
 
-  // Social login event listeners
   document.querySelector(".google-btn").addEventListener("click", () => {
     // Redirect to Google OAuth
     window.location.href = "https://accounts.google.com/o/oauth2/auth";
   });
-
+  
   document.querySelector(".github-btn").addEventListener("click", () => {
     // Redirect to GitHub OAuth
     window.location.href = "https://github.com/login/oauth/authorize";

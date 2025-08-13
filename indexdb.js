@@ -1,4 +1,3 @@
-// Initialize Firebase
 const firebaseConfig = {
   authDomain: "brand-hub-144ae.firebaseapp.com",
   databaseURL: "https://brand-hub-144ae-default-rtdb.firebaseio.com",
@@ -9,11 +8,9 @@ const firebaseConfig = {
   measurementId: "G-7K74KYTYHF",
 };
 
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
-// Function to load all brands from the database
 function loadBrands() {
   const brandGrid = document.getElementById("brandGrid");
   brandGrid.innerHTML = '<p class="loading">Loading brands...</p>';
@@ -27,28 +24,21 @@ function loadBrands() {
         return;
       }
 
-      // Clear loading message
       brandGrid.innerHTML = "";
 
-      // Load categories for filter
       const categories = new Set();
       const brandsData = snapshot.val();
 
-      // Loop through all brands
       Object.keys(brandsData).forEach((key) => {
         const brand = brandsData[key];
-        brand.id = key; // Add the key as id to the brand object
+        brand.id = key;
 
-        // Add category to the set
         if (brand.category) {
           categories.add(brand.category);
         }
 
-        // Create brand card
         createBrandCard(brand);
       });
-
-      // Update category filter dropdown
       updateCategoryFilter(categories);
     })
     .catch((error) => {
@@ -58,7 +48,6 @@ function loadBrands() {
     });
 }
 
-// Function to add a new brand
 function addBrand() {
   const brandData = {
     name: document.getElementById("brandName").value,
@@ -66,23 +55,20 @@ function addBrand() {
     description: document.getElementById("brandDescription").value,
   };
 
-  // Validate brand data
   if (!brandData.name || !brandData.category) {
     alert("Please fill in all required fields.");
     return;
   }
 
-  // Generate a new unique key in the brands node
   const newBrandRef = db.ref("brands").push();
 
-  // Set data at the new reference
   newBrandRef
     .set(brandData)
     .then(() => {
       alert("Brand added successfully!");
       document.getElementById("addBrandForm").reset();
       document.getElementById("addBrandModal").style.display = "none";
-      loadBrands(); // Reload brands to show the new one
+      loadBrands();
     })
     .catch((error) => {
       console.error("Error adding brand: ", error);
@@ -90,7 +76,6 @@ function addBrand() {
     });
 }
 
-// Function to update a brand
 function updateBrand(brandId) {
   const brandData = {
     name: document.getElementById("brandName").value,
@@ -98,7 +83,6 @@ function updateBrand(brandId) {
     description: document.getElementById("brandDescription").value,
   };
 
-  // Validate brand data
   if (!brandData.name || !brandData.category) {
     alert("Please fill in all required fields.");
     return;
@@ -110,7 +94,7 @@ function updateBrand(brandId) {
       alert("Brand updated successfully!");
       document.getElementById("addBrandForm").reset();
       document.getElementById("addBrandModal").style.display = "none";
-      loadBrands(); // Reload brands
+      loadBrands();
     })
     .catch((error) => {
       console.error("Error updating brand: ", error);
@@ -118,16 +102,15 @@ function updateBrand(brandId) {
     });
 }
 
-// Example of how to call addBrand when a form is submitted
 document
   .getElementById("addBrandForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the default form submission
-    const editId = document.getElementById("addBrandForm").dataset.editId; // Get edit ID if exists
+    event.preventDefault();
+    const editId = document.getElementById("addBrandForm").dataset.editId;
     if (editId) {
-      updateBrand(editId); // Call update if edit ID exists
+      updateBrand(editId);
     } else {
-      addBrand(); // Call addBrand if no edit ID
+      addBrand();
     }
   });
 
@@ -136,17 +119,16 @@ function editBrand(brand) {
   document.getElementById("brandName").value = brand.name;
   document.getElementById("brandCategory").value = brand.category;
   document.getElementById("brandDescription").value = brand.description;
-  document.getElementById("addBrandForm").dataset.editId = brand.id; // Store the brand ID for updating
-  document.getElementById("addBrandModal").style.display = "block"; // Show the modal
+  document.getElementById("addBrandForm").dataset.editId = brand.id;
+  document.getElementById("addBrandModal").style.display = "block";
 }
 
-// Function to delete a brand
 function deleteBrand(brandId) {
   db.ref(`brands/${brandId}`)
     .remove()
     .then(() => {
       alert("Brand deleted successfully!");
-      loadBrands(); // Reload brands
+      loadBrands();
     })
     .catch((error) => {
       console.error("Error deleting brand: ", error);
@@ -154,7 +136,6 @@ function deleteBrand(brandId) {
     });
 }
 
-// Function to handle user signup
 function signup() {
   const email = document.getElementById("signupEmail").value;
   const password = document.getElementById("signupPassword").value;
@@ -163,10 +144,9 @@ function signup() {
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
-      // Signed in
       alert("Signup successful!");
-      hideLoginSignupLinks(); // Hide login and signup links
-      window.location.href = "index.html"; // Redirect to home page
+      hideLoginSignupLinks();
+      window.location.href = "index.html";
     })
     .catch((error) => {
       console.error("Error during signup: ", error);
@@ -174,7 +154,6 @@ function signup() {
     });
 }
 
-// Function to handle user login
 function login() {
   const email = document.getElementById("loginEmail").value;
   const password = document.getElementById("loginPassword").value;
@@ -183,10 +162,9 @@ function login() {
     .auth()
     .signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
-      // Signed in
       alert("Login successful!");
-      hideLoginSignupLinks(); // Hide login and signup links
-      window.location.href = "index.html"; // Redirect to home page
+      hideLoginSignupLinks();
+      window.location.href = "index.html";
     })
     .catch((error) => {
       console.error("Error during login: ", error);
@@ -194,11 +172,8 @@ function login() {
     });
 }
 
-// Function to hide login and signup links
 function hideLoginSignupLinks() {
   document.getElementById("loginLink").style.display = "none";
   document.getElementById("signupLink").style.display = "none";
 }
-
-// Load brands on page load
 loadBrands();
