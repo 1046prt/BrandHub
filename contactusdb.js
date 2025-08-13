@@ -1,4 +1,3 @@
-// Initialize Firebase
 const firebaseConfig = {
   authDomain: "brand-hub-144ae.firebaseapp.com",
   databaseURL: "https://brand-hub-144ae-default-rtdb.firebaseio.com",
@@ -13,7 +12,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var contactdb = firebase.database().ref("contactform");
 
-// Corrected form ID
 document.getElementById("contactForm").addEventListener("submit", submitForm);
 
 function submitForm(e) {
@@ -37,7 +35,6 @@ const saveMessages = (name, email, phone, message) => {
       message: message,
     })
     .then(() => {
-      // Redirect to index.html after successful submission
       window.location.href = "/index.html";
     })
     .catch((error) => {
