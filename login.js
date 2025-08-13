@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Optional: Show success message or redirect
       alert("Login successful! Redirecting to dashboard.");
-      window.location.href = "dashboard.html"; // Replace with your actual dashboard page
+      window.location.href = "/index.html"; // Replace with your actual dashboard page
     }
   });
 

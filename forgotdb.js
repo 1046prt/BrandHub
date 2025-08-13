@@ -43,7 +43,7 @@ document
 
         // Optional: Redirect after a delay
         setTimeout(() => {
-          window.location.href = "login.html";
+          window.location.href = "/login.html";
         }, 5000);
       })
       .catch((error) => {

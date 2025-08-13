@@ -33,23 +33,19 @@ function loginUser(e) {
         // Check if email and password match
         if (userData.mail === email && userData.pass === password) {
           userFound = true;
-          // User found, handle successful login
-          alert("Login successful!");
 
           // Hide the login and signup links
           document.getElementById("loginLink").style.display = "none";
           document.getElementById("signupLink").style.display = "none";
 
           // Redirect to index.html
-          window.location.href = "index.html";
+          window.location.href = "/index.html";
         }
       });
 
-      // If user is not found after checking all entries
       if (!userFound) {
         // User not found, handle login failure
         alert("Invalid email or password. Please try again.");
-        // Optionally, you can clear the password field for security
         document.getElementById("password").value = "";
       }
     })
@@ -61,7 +57,6 @@ function loginUser(e) {
     });
 }
 
-// Utility function to get element value
 const getElementVal = (id) => {
   return document.getElementById(id).value;
 };

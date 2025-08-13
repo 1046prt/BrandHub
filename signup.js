@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Optional: Show success message or redirect
       alert("Registration successful! Redirecting to login page.");
-      window.location.href = "login.html";
+      window.location.href = "/login.html";
     }
   });
 

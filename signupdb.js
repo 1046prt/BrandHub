@@ -43,7 +43,7 @@ const savemessages = (name, mail, pass, cpass) => {
 
       // Optionally, you can redirect or show a success message here
       alert("Signup successful!"); // Show a success message
-      window.location.href = "index.html"; // Redirect to home page
+      window.location.href = "/index.html"; // Redirect to home page
     })
     .catch((error) => {
       console.error("Error saving message: ", error);

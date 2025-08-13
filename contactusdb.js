@@ -38,7 +38,7 @@ const saveMessages = (name, email, phone, message) => {
     })
     .then(() => {
       // Redirect to index.html after successful submission
-      window.location.href = "index.html";
+      window.location.href = "/index.html";
     })
     .catch((error) => {
       console.error("Error sending message: ", error);
