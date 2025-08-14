@@ -2,7 +2,7 @@
 
 ## Overview
 
-Brand Hub is a web application designed to showcase a variety of brands across different categories. Users can easily explore and discover brands in technology, automotive, streaming services, and more. The application features a user-friendly interface, dynamic brand display, and efficient search functionality.
+Brand Hub is a web application designed to showcase a diverse range of brands across various categories. Users can easily explore and discover brands across various industries, including technology, automotive, and streaming services, among others. The application features a user-friendly interface, dynamic brand display, and efficient search functionality.
 
 ## Features
 
@@ -53,5 +53,5 @@ To run the Brand Hub application locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/1046prt/brand-hub.git
+ [git clone https://github.com/1046prt/BrandHub.git](https://github.com/1046prt/BrandHub)
    ```
